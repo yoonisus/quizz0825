@@ -1,24 +1,64 @@
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+========================================================
+<strong> 8월 25일 정기세션 퀴즈 </strong>
+
+<h1> 오픈북 테스트입니다. 카페, c9코드 모두 참고하셔도 괜찮습니다. </h1>
+<h2> 다만 옆사람에게 질문 및 대답 금지입니다. 스스로 해결하는 것이 훨씬 좋습니다! </h2>
+
+0. 몸풀기
+
+    먼저 3명의 회원을 만들어보세요
+
+    - 로그아웃이 안될거에요. 디버깅 ㄱㄱ
+    
+    회원 3명을 만들고 글을 쓰려하면 오류가 납니다.
+    
+    - Ability.rb로 가서 권한을 설정해주세요~
+    
+    설정을 잘하셨다면 각 회원별로 글을 하나씩 써주세요.
 
 
-Welcome to your Rails project on Cloud9 IDE!
+1. 범위
 
-To get started, just do the following:
+    - 주로 고쳐야할 곳은 ability.rb / index.html.erb / rails c
+    - 참고하거나 약간 고쳐야할 곳은 role.rb / devise.rb / 20160818083456_devise_create_users.rb
 
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://section-0818-csy1204.c9users.io/).
+2. 추가할 사항
 
-Happy coding!
-The Cloud9 IDE team
+    -index.html.erb에서 추가할 사항
+    
+    1. 유저의 마지막 접속일자(현재는 최근으로 되어있음), 현재 ip주소 보여주기
+    2. 비로그인 유저에게 회원가입 버튼 보여주기 (sign_up)
+    3. 비로그인 유저에겐 글쓰는 공간 가리기
+
+    -ability.rb에서 추가할 사항
+    
+    1. 새로운 권한: moderator 추가
+    2. moderator 에겐 모든 POST글에대한 manage권한 부여
+    
+    Hint: 권한 추가하는 방법은 admin 권한 추가한 것과 이름만 다르고 완벽히 같습니다.
+
+    -Rolify (rails c) 에서 추가할 사항
+
+    1. 첫번째 유저에겐 admin 권한 부여
+    2. 두번째 유저에겐 moderator 권한 부여
+
+    화룡정점
+
+    수정,삭제 버튼을 글쓴이 / admin / moderator 에게만 보이게하기
 
 
-## Support & Documentation
 
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+
+
+
+
+
+
+
+
+
+
+
+
+
