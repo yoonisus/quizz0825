@@ -9,8 +9,8 @@ class Ability
       #아래에 moderator 권한을 추가해주세요. 
       #구조는 위 admin의 elsif 구조와 비슷합니다. 
       #Post모델에대해서만 manange가능하게 해주세요.(아래 else 부분을 참고해주세요)
-      
-      
+      elsif user.has_role? :moderator
+        can :manage, :Post
       else
         can :manage, Post, user_id: user.id 
         # manage가능, Post 모델에대해, user_id: user.id는 자기가 쓴 글만 하겠다는 뜻!
